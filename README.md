@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Coactiva Web
 
-## Getting Started
+Sitio web institucional de **Grupo Coactiva S.A.S.**, una agencia líder en recuperación de cartera en Colombia y América Latina. Este proyecto fue desarrollado con React, Vite, TypeScript y Tailwind CSS, con foco en rendimiento, accesibilidad y una interfaz clara para el contacto con potenciales clientes.
 
-First, run the development server:
+## 🌐 Descripción
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Grupo Coactiva S.A.S. es especialista en recuperación jurídica, prejurídica y extrajurídica de cartera vencida. La web fue diseñada para reflejar sus valores de ética, transparencia y compromiso, y facilitar el contacto directo con empresas que requieran apoyo profesional para recuperar su dinero.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El sitio cuenta con:
+- Página principal con llamada a la acción y formulario de contacto.
+- Sección de servicios detallados.
+- Beneficios de contratar a Coactiva.
+- Página "Sobre Nosotros" con misión, visión, valores y responsabilidad social.
+- Información de contacto clara y accesible.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Tecnologías utilizadas
 
-## Learn More
+- **React** – Biblioteca principal de UI.
+- **Vite** – Bundler ultrarrápido para desarrollo moderno en frontend.
+- **TypeScript** – Tipado estático para mayor robustez.
+- **Tailwind CSS** – Framework de estilos utilitarios.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📬 Información de contacto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Grupo Coactiva S.A.S.**
+Circular 76 # 39B - 135, Laureles, Medellín
+📞 +57 301 859 4940
+✉️ [info@grupocoactiva.com](mailto:info@grupocoactiva.com)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✅ Créditos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Andrés Cardona
+
+---
