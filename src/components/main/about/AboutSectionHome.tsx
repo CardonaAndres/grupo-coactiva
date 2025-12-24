@@ -23,19 +23,22 @@ export const AboutSectionHome = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image Side */}
             <div className="relative">
-              <div className="relative h-125 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-144 rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/imgs/people/esteban-restrepo.png"
                   alt="Esteban Restrepo - Director Jurídico"
                   fill
-                  className="object-cover"
+                  className="object-contain"
+                  priority
                 />
-                {/* Overlay Badge */}
-                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
-                  <p className="font-bold text-gray-900 text-lg">Esteban Restrepo</p>
-                  <p className="text-cyan-700 text-sm">Socio-Fundador y Director Jurídico</p>
-                </div>
               </div>
+              
+              {/* Name Card Below Image */}
+              <div className="mt-6 bg-white rounded-xl p-4 shadow-lg border border-gray-100">
+                <p className="font-bold text-gray-900 text-lg">Esteban Restrepo</p>
+                <p className="text-cyan-700 text-sm">Socio-Fundador y Director Jurídico</p>
+              </div>
+
               {/* Decorative Element */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-cyan-100 rounded-full -z-10"></div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-cyan-50 rounded-full -z-10"></div>

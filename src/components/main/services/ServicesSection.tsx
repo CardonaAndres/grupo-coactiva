@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import { WhatsAppIcon } from '@/global/components';
+import { WhatsAppService } from '@/global/services';
 
 const services = [
   {
@@ -6,18 +9,21 @@ const services = [
     title: 'Cobro de Cartera Vencida',
     description: 'Recuperación de cartera con alta eficiencia a nivel nacional. 18 ejecutivos y 7 abogados especializados trabajando para maximizar resultados.',
     highlight: 'Obligaciones superiores a $10.000.000 COP',
+    href: '/nuestros-servicios/cobro-de-cartera',
   },
   {
     number: '02',
     title: 'Insolvencia Personal',
     description: 'Libérese de sus deudas por la vía legal. Aplicamos la Ley de la Segunda Oportunidad sin límite de monto. Protección integral de su patrimonio.',
     highlight: 'Sin límite de monto',
+    href: '/nuestros-servicios/insolvencia',
   },
   {
     number: '03',
     title: 'Insolvencia Empresarial',
     description: 'Reorganización y liquidación empresarial bajo la Ley 1116 de 2006. Preservar la empresa como unidad productiva o cerrar operaciones legalmente.',
     highlight: 'Reorganización y liquidación',
+    href: '/nuestros-servicios/insolvencia',
   },
 ];
 
@@ -59,23 +65,35 @@ export const ServicesSection = () => {
               </p>
 
               {/* Highlight */}
-              <div className="pt-4 border-t border-gray-200">
+              <div className="pt-4 border-t border-gray-200 mb-4">
                 <p className="text-sm font-bold text-cyan-800">
                   {service.highlight}
                 </p>
               </div>
+
+              {/* Ver más link */}
+              <Link
+                href={service.href}
+                className="inline-flex items-center text-cyan-800 hover:text-cyan-900 font-semibold text-sm group-hover:gap-2 transition-all"
+              >
+                Ver más
+                <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           ))}
         </div>
 
-        {/* CTA */}
+        {/* CTA WhatsApp */}
         <div className="text-center">
-          <Link
-            href="/servicios-de-cobranzas-en-grupo-coactiva"
-            className="inline-flex items-center justify-center bg-cyan-800 hover:bg-cyan-900 text-white px-12 py-5 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+          <a
+            href={WhatsAppService.getWhatsAppUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white px-12 py-5 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
-            Ver todos los servicios
-          </Link>
+            <WhatsAppIcon className="w-6 h-6" />
+            Consulta Gratuita por WhatsApp
+          </a>
         </div>
       </div>
     </section>

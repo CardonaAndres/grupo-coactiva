@@ -7,7 +7,8 @@ import { useState, useEffect } from 'react';
 
 const navLinks = [
   { href: '/', label: 'Inicio' },
-  { href: '/servicios-de-cobranzas-en-grupo-coactiva', label: 'Servicios' },
+  { href: '/nuestros-servicios/cobro-de-cartera', label: 'Cobro de cartera' },
+  { href: '/nuestros-servicios/insolvencia', label: 'Insolvencia' },
   { href: '/quienes-somos-grupo-coactiva', label: 'Nosotros' },
   { href: '/comunicate-con-grupo-coactiva', label: 'Contacto' },
 ];

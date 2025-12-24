@@ -42,7 +42,7 @@ export const Footer = () => {
               />
             </div>
             <p className="text-gray-600 text-sm leading-relaxed border-l-4 border-cyan-800 pl-4">
-              15 años de experiencia en recuperación de cartera y soluciones de insolvencia a nivel nacional.
+              Asesoría legal estratégica y personalizada, orientada a la protección del patrimonio y la recuperación económica.
             </p>
           </div>
 

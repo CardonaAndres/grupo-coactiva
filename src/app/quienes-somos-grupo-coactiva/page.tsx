@@ -1,6 +1,7 @@
 import Image from 'next/image';
+import { WhatsAppIcon } from '@/global/components';
 import { WhatsAppService } from '@/global/services';
-import { Award, Target, Shield, Users } from 'lucide-react';
+import { Target, Shield, Users } from 'lucide-react';
 
 const values = [
   {
@@ -18,11 +19,6 @@ const values = [
     title: 'Equipo Especializado',
     description: '18 ejecutivos y 7 abogados especializados en recuperación y procesos judiciales.',
   },
-  {
-    icon: Award,
-    title: '15 Años de Experiencia',
-    description: 'Líderes a nivel nacional en recuperación de cartera e insolvencia.',
-  },
 ];
 
 export default function AboutPage() {
@@ -36,7 +32,7 @@ export default function AboutPage() {
               ¿Quiénes Somos?
             </h1>
             <p className="text-lg text-cyan-100">
-              Líderes en recuperación de cartera y soluciones de insolvencia con 15 años de experiencia
+              Líderes en recuperación de cartera y soluciones de insolvencia
             </p>
           </div>
         </div>
@@ -49,12 +45,12 @@ export default function AboutPage() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Image */}
-                <div className="relative h-96 md:h-full bg-gray-200">
+                <div className="relative h-125 bg-gray-100">
                   <Image
                     src="/imgs/people/esteban-restrepo.png"
                     alt="Esteban Restrepo - Director Jurídico Grupo Coactiva"
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     priority
                   />
                 </div>
@@ -68,10 +64,10 @@ export default function AboutPage() {
                     Socio-Fundador y Director Jurídico
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Con <strong>15 años de experiencia</strong> en el manejo integral del <strong>cobro de cartera empresarial</strong>, procesos <strong>prejurídicos y jurídicos</strong>, e <strong>insolvencias de persona natural y jurídica</strong>.
+                    Experto en el manejo integral del <strong>cobro de cartera empresarial</strong>, procesos <strong>prejurídicos y jurídicos</strong>, e <strong>insolvencias de persona natural y jurídica</strong>.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    Su enfoque combina <strong>estrategia legal, negociación y eficiencia</strong>, permitiendo a empresas y personas <strong>recuperar su estabilidad financiera</strong> con un <strong>respaldo jurídico real y confiable</strong>.
+                    Su enfoque combina <strong>estrategia legal, negociación y eficiencia</strong>, permitiendo recuperar la <strong>estabilidad financiera</strong> con un <strong>respaldo jurídico real y confiable</strong>.
                   </p>
                 </div>
               </div>
@@ -93,7 +89,7 @@ export default function AboutPage() {
 
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed mb-6">
-                En Grupo Coactiva S.A.S. acompañamos a empresas y personas en la <strong>solución de sus obligaciones financieras</strong>, brindando <strong>asesoría legal estratégica, personalizada y efectiva</strong>, orientada a la <strong>protección del patrimonio</strong> y la <strong>recuperación de la estabilidad económica</strong>.
+                En Grupo Coactiva S.A.S. brindamos <strong>asesoría legal estratégica, personalizada y efectiva</strong>, orientada a la <strong>protección del patrimonio</strong> y la <strong>recuperación de la estabilidad económica</strong>.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-6">
@@ -117,7 +113,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid sm:grid-cols-3 gap-8">
               {values.map((value, index) => {
                 const Icon = value.icon;
                 return (
@@ -159,9 +155,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-                </svg>
+                <WhatsAppIcon className="w-5 h-5" />
                 Hablar con un Asesor
               </a>
               <a

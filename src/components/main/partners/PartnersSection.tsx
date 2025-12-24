@@ -3,27 +3,27 @@ import Image from 'next/image';
 const partners = [
   {
     name: 'Aliado 1',
-    logo: '/imgs/people/esteban-restrepo.png',
+    logo: '/imgs/allies/vallas_y_avisos.webp',
   },
   {
     name: 'Aliado 2',
-    logo: '/imgs/people/esteban-restrepo.png',
+    logo: '/imgs/allies/procopal.webp',
   },
   {
     name: 'Aliado 3',
-    logo: '/imgs/people/esteban-restrepo.png',
+    logo: '/imgs/allies/miro_seguridad.webp',
   },
   {
     name: 'Aliado 4',
-    logo: '/imgs/people/esteban-restrepo.png',
+    logo: '/imgs/allies/la_mansion.webp',
   },
   {
     name: 'Aliado 5',
-    logo: '/imgs/people/esteban-restrepo.png',
+    logo: '/imgs/allies/casa_arango.webp',
   },
   {
     name: 'Aliado 6',
-    logo: '/imgs/people/esteban-restrepo.png',
+    logo: '/imgs/allies/ATH.webp',
   },
 ];
 
