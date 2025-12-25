@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { WhatsAppIcon } from '@/global/components';
 import { WhatsAppService } from '@/global/services';
+import { PartnersSection } from '@/components/cobro-cartera';
 import { Users, Scale, Target, CheckCircle, MapPin, Clock, DollarSign } from 'lucide-react';
 
 const services = [
@@ -220,6 +221,9 @@ export default function CobroCarteraPage() {
           </div>
         </div>
       </section>
+
+      {/* Partners Section */}
+      <PartnersSection />
 
       {/* CTA */}
       <section className="py-12 sm:py-16">

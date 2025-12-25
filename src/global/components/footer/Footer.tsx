@@ -20,14 +20,14 @@ const socialLinks = [
     label: 'LinkedIn',
   },
   {
-    href: 'https://www.instagram.com/grupocoactiva',
-    icon: Instagram,
-    label: 'Grupo Coactiva',
-  },
-  {
     href: 'https://www.instagram.com/estebanrlegal',
     icon: Instagram,
     label: 'Esteban Restrepo',
+  },
+  {
+    href: 'https://www.instagram.com/grupocoactiva',
+    icon: Instagram,
+    label: 'Grupo Coactiva',
   },
 ];
 

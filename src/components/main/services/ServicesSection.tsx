@@ -38,7 +38,7 @@ export const ServicesSection = () => {
           </h2>
           <div className="w-24 h-1 bg-cyan-800 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 leading-relaxed">
-            15 años de experiencia en recuperación de cartera y soluciones de insolvencia
+            15 años de experiencia en recuperación de cartera y procesos de insolvencia
           </p>
         </div>
 
