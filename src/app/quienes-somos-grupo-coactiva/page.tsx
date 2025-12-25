@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { WhatsAppIcon } from '@/global/components';
 import { WhatsAppService } from '@/global/services';
@@ -158,12 +159,12 @@ export default function AboutPage() {
                 <WhatsAppIcon className="w-5 h-5" />
                 Hablar con un Asesor
               </a>
-              <a
-                href="/contacto"
+              <Link
+                href="/comunicate-con-grupo-coactiva"
                 className="inline-flex items-center justify-center gap-2 bg-cyan-700 hover:bg-cyan-800 text-white px-8 py-4 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg"
               >
                 Solicitar Consulta
-              </a>
+              </Link>
             </div>
           </div>
         </div>
