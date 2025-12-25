@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { WhatsAppIcon } from '@/global/components';
 import { WhatsAppService } from '@/global/services';
 import { Users, Scale, Target, CheckCircle, MapPin, Clock, DollarSign } from 'lucide-react';
@@ -240,12 +241,12 @@ export default function CobroCarteraPage() {
                 <WhatsAppIcon className="w-6 h-6" />
                 Hablar por WhatsApp
               </a>
-              <a
-                href="/contacto"
+              <Link
+                href="/comunicate-con-grupo-coactiva"
                 className="inline-flex items-center justify-center gap-2 bg-cyan-700 hover:bg-cyan-800 text-white px-8 py-4 rounded-lg font-semibold transition-all shadow-lg"
               >
                 Formulario de Contacto
-              </a>
+              </Link>
             </div>
           </div>
         </div>

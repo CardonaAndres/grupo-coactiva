@@ -5,16 +5,16 @@ import { TrendingUp, Scale, ArrowRight } from 'lucide-react';
 
 const services = [
   {
-    icon: TrendingUp,
-    title: 'Cobro de Cartera',
-    description: 'Recuperación eficiente con cobertura nacional',
-    href: '/servicios-de-cobranzas-en-grupo-coactiva#cobro',
-  },
-  {
     icon: Scale,
     title: 'Insolvencia',
     description: 'Soluciones legales para personas y empresas',
     href: '/servicios-de-cobranzas-en-grupo-coactiva#insolvencia-personal',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Cobro de Cartera',
+    description: 'Recuperación eficiente con cobertura nacional',
+    href: '/servicios-de-cobranzas-en-grupo-coactiva#cobro',
   },
 ];
 
@@ -39,7 +39,7 @@ export const Hero = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-cyan-100 max-w-3xl mx-auto leading-relaxed mb-4">
-              Asesoría legal estratégica y personalizada, orientada a la protección del patrimonio y la recuperación económica.
+              Soluciones jurídicas claras y efectivas para deudas, cartera vencida e insolvencias.
             </p>
 
             <p className="text-base text-cyan-200 max-w-2xl mx-auto mb-8">

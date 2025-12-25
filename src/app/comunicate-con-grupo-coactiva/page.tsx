@@ -1,19 +1,7 @@
-import { MapPin, Phone, Mail } from 'lucide-react';
-
-const offices = [
-  {
-    city: 'Medellín',
-    address: 'Calle 10 # 43B-40, Oficina 1101',
-    phones: ['+57 (4) 444 5555', '+57 300 123 4567'],
-    email: 'medellin@grupocoactivasas.com',
-  },
-  {
-    city: 'Bogotá',
-    address: 'Carrera 7 # 32-16, Oficina 502',
-    phones: ['+57 (1) 444 5555', '+57 310 123 4567'],
-    email: 'bogota@grupocoactivasas.com',
-  },
-];
+import { Phone, Mail } from 'lucide-react';
+import { WhatsAppIcon } from '@/global/components';
+import { WhatsAppService } from '@/global/services';
+import { LocationsSection } from '@/components/main';
 
 export default function ContactPage() {
   return (
@@ -37,7 +25,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 h-fit">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Solicite una Consulta Gratuita
               </h2>
@@ -128,6 +116,25 @@ export default function ContactPage() {
 
             {/* Contact Info */}
             <div className="space-y-8">
+              {/* WhatsApp CTA */}
+              <div className="bg-linear-to-br from-green-500 to-green-600 rounded-xl shadow-lg p-8 text-white">
+                <h3 className="text-xl font-bold mb-3">
+                  ¿Prefiere hablar directamente?
+                </h3>
+                <p className="mb-6 text-green-50">
+                  Contáctenos por WhatsApp para una respuesta inmediata
+                </p>
+                <a
+                  href={WhatsAppService.getWhatsAppUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-green-600 font-semibold px-6 py-3 rounded-lg transition-colors shadow-md w-full"
+                >
+                  <WhatsAppIcon className="w-5 h-5" />
+                  Contactar un Asesor
+                </a>
+              </div>
+
               {/* Info Cards */}
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-6">
@@ -140,8 +147,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Teléfono</h4>
-                      <a href="tel:+573001234567" className="text-gray-600 hover:text-cyan-700 transition-colors">
-                        +57 300 123 4567
+                      <a href="tel:+573018594940" className="text-gray-600 hover:text-cyan-700 transition-colors">
+                        +57 3018594940
                       </a>
                     </div>
                   </div>
@@ -152,49 +159,20 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                      <a href="mailto:info@grupocoactivasas.com" className="text-gray-600 hover:text-cyan-700 transition-colors">
-                        info@grupocoactivasas.com
+                      <a href="mailto:info@grupocoactivasas.com" className="text-gray-600 hover:text-cyan-700 transition-colors break-all">
+                        comercial@grupocoactivasas.com
                       </a>
                     </div>
                   </div>
-
-                </div>
-              </div>
-
-              {/* Offices */}
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">
-                  Nuestras Sedes
-                </h3>
-                <div className="space-y-6">
-                  {offices.map((office, index) => (
-                    <div key={index} className="pb-6 border-b border-gray-200 last:border-0 last:pb-0">
-                      <div className="flex items-start gap-3">
-                        <MapPin className="w-5 h-5 text-cyan-700 shrink-0 mt-1" />
-                        <div>
-                          <h4 className="font-semibold text-gray-900 mb-2">{office.city}</h4>
-                          <p className="text-gray-600 text-sm mb-2">{office.address}</p>
-                          <div className="space-y-1">
-                            {office.phones.map((phone, idx) => (
-                              <a
-                                key={idx}
-                                href={`tel:${phone.replace(/\s/g, '')}`}
-                                className="block text-sm text-cyan-700 hover:text-cyan-800 transition-colors"
-                              >
-                                {phone}
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Locations Section */}
+      <LocationsSection />
     </div>
   );
 }

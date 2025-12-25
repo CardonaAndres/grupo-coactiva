@@ -6,24 +6,24 @@ import { WhatsAppService } from '@/global/services';
 const services = [
   {
     number: '01',
-    title: 'Cobro de Cartera Vencida',
-    description: 'Recuperación de cartera con alta eficiencia a nivel nacional. 18 ejecutivos y 7 abogados especializados trabajando para maximizar resultados.',
-    highlight: 'Obligaciones superiores a $10.000.000 COP',
-    href: '/nuestros-servicios/cobro-de-cartera',
-  },
-  {
-    number: '02',
     title: 'Insolvencia Personal',
     description: 'Libérese de sus deudas por la vía legal. Aplicamos la Ley de la Segunda Oportunidad sin límite de monto. Protección integral de su patrimonio.',
     highlight: 'Sin límite de monto',
     href: '/nuestros-servicios/insolvencia',
   },
   {
-    number: '03',
+    number: '02',
     title: 'Insolvencia Empresarial',
     description: 'Reorganización y liquidación empresarial bajo la Ley 1116 de 2006. Preservar la empresa como unidad productiva o cerrar operaciones legalmente.',
     highlight: 'Reorganización y liquidación',
     href: '/nuestros-servicios/insolvencia',
+  },
+  {
+    number: '03',
+    title: 'Cobro de Cartera Vencida',
+    description: 'Recuperación de cartera con alta eficiencia a nivel nacional. 18 ejecutivos y 7 abogados especializados trabajando para maximizar resultados.',
+    highlight: 'Obligaciones superiores a $10.000.000 COP',
+    href: '/nuestros-servicios/cobro-de-cartera',
   },
 ];
 

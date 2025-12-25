@@ -1,25 +1,34 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Phone, Mail } from 'lucide-react';
-
-const offices = [
-  {
-    city: 'Medellín',
-    address: 'Calle 10 # 43B-40, Oficina 1101',
-    phones: ['+57 (4) 444 5555', '+57 300 123 4567'],
-  },
-  {
-    city: 'Bogotá',
-    address: 'Carrera 7 # 32-16, Oficina 502',
-    phones: ['+57 (1) 444 5555', '+57 310 123 4567'],
-  },
-];
+import { Phone, Mail, Linkedin, Instagram } from 'lucide-react';
 
 const quickLinks = [
   { href: '/', label: 'Inicio' },
-  { href: '/servicios-de-cobranzas-en-grupo-coactiva', label: 'Servicios' },
   { href: '/quienes-somos-grupo-coactiva', label: 'Nosotros' },
   { href: '/comunicate-con-grupo-coactiva', label: 'Contacto' },
+];
+
+const serviceLinks = [
+  { href: '/nuestros-servicios/insolvencia', label: 'Insolvencia' },
+  { href: '/nuestros-servicios/cobro-de-cartera', label: 'Cobro de Cartera' },
+];
+
+const socialLinks = [
+  {
+    href: 'http://linkedin.com/in/estebanrestrepoo',
+    icon: Linkedin,
+    label: 'LinkedIn',
+  },
+  {
+    href: 'https://www.instagram.com/grupocoactiva',
+    icon: Instagram,
+    label: 'Grupo Coactiva',
+  },
+  {
+    href: 'https://www.instagram.com/estebanrlegal',
+    icon: Instagram,
+    label: 'Esteban Restrepo',
+  },
 ];
 
 const currentYear = new Date().getFullYear();
@@ -29,7 +38,7 @@ export const Footer = () => {
     <footer className="bg-white text-gray-800 border-t border-gray-200">
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
@@ -38,21 +47,40 @@ export const Footer = () => {
                 alt="Grupo Coactiva S.A.S | Logo"
                 width={140}
                 height={40}
-                className="w-25 sm:w-30 md:w-32.5 h-auto"
+                className="w-32 h-auto"
               />
             </div>
             <p className="text-gray-600 text-sm leading-relaxed border-l-4 border-cyan-800 pl-4">
-              Asesoría legal estratégica y personalizada, orientada a la protección del patrimonio y la recuperación económica.
+              Soluciones jurídicas claras y efectivas para deudas, cartera vencida e insolvencias.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="text-cyan-800 font-bold text-lg mb-6 uppercase tracking-wide">
-              Enlaces Rápidos
+              Enlaces
             </h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-700 hover:text-cyan-800 hover:pl-2 transition-all duration-200 inline-block font-medium"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services Links */}
+          <div>
+            <h4 className="text-cyan-800 font-bold text-lg mb-6 uppercase tracking-wide">
+              Servicios
+            </h4>
+            <ul className="space-y-3">
+              {serviceLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
@@ -70,7 +98,7 @@ export const Footer = () => {
             <h4 className="text-cyan-800 font-bold text-lg mb-6 uppercase tracking-wide">
               Contacto
             </h4>
-            <div className="space-y-4">
+            <div className="space-y-4 mb-6">
               <a
                 href="tel:+573001234567"
                 className="flex items-center gap-3 text-gray-700 hover:text-cyan-800 transition-colors group"
@@ -78,7 +106,7 @@ export const Footer = () => {
                 <div className="bg-cyan-800 text-white p-2 rounded-lg group-hover:bg-cyan-900 transition-colors">
                   <Phone className="w-4 h-4" />
                 </div>
-                <span className="font-medium">+57 300 123 4567</span>
+                <span className="font-medium text-sm">+57 3018594940</span>
               </a>
               <a
                 href="mailto:info@grupocoactivasas.com"
@@ -87,49 +115,33 @@ export const Footer = () => {
                 <div className="bg-cyan-800 text-white p-2 rounded-lg group-hover:bg-cyan-900 transition-colors">
                   <Mail className="w-4 h-4" />
                 </div>
-                <span className="font-medium">info@grupocoactivasas.com</span>
+                <span className="font-medium text-sm break-all">comercial@grupocoactivasas.com</span>
               </a>
             </div>
-          </div>
-        </div>
 
-        {/* Offices */}
-        <div className="mt-16 pt-12 border-t-2 border-cyan-800">
-          <h4 className="text-cyan-800 font-bold text-xl mb-8 text-center uppercase tracking-wide">
-            Nuestras Sedes
-          </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {offices.map((office, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 hover:shadow-lg transition-all duration-300 border-2 border-cyan-800 hover:border-cyan-900 hover:-translate-y-1"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="bg-cyan-800 text-white p-3 rounded-lg shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div className="flex-1">
-                    <h5 className="text-cyan-800 font-bold text-lg mb-3">
-                      {office.city}
-                    </h5>
-                    <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                      {office.address}
-                    </p>
-                    <div className="space-y-2">
-                      {office.phones.map((phone, idx) => (
-                        <a
-                          key={idx}
-                          href={`tel:${phone.replace(/\s/g, '')}`}
-                          className="block text-cyan-800 hover:text-cyan-900 text-sm transition-colors font-semibold"
-                        >
-                          {phone}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+            {/* Social Links */}
+            <div>
+              <h5 className="text-gray-700 font-semibold mb-3">Síguenos</h5>
+              <div className="space-y-2">
+                {socialLinks.map((social, index) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-700 hover:text-cyan-800 transition-colors group"
+                    >
+                      <div className="bg-cyan-800 text-white p-2 rounded-lg group-hover:bg-cyan-900 transition-colors">
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <span className="font-medium text-sm">{social.label}</span>
+                    </a>
+                  );
+                })}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
