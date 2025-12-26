@@ -1,4 +1,5 @@
 import { Phone, Mail } from 'lucide-react';
+import { Form } from '@/components/contact';
 import { WhatsAppIcon } from '@/global/components';
 import { WhatsAppService } from '@/global/services';
 import { LocationsSection } from '@/components/main';
@@ -29,89 +30,7 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Solicite una Consulta Gratuita
               </h2>
-              <form action="/api/contact" method="POST" className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-2">
-                      Nombre completo *
-                    </label>
-                    <input
-                      type="text"
-                      id="nombre"
-                      name="nombre"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent outline-none transition"
-                      placeholder="Juan Pérez"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="empresa" className="block text-sm font-medium text-gray-700 mb-2">
-                      Empresa
-                    </label>
-                    <input
-                      type="text"
-                      id="empresa"
-                      name="empresa"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent outline-none transition"
-                      placeholder="Nombre de su empresa"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent outline-none transition"
-                      placeholder="correo@ejemplo.com"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="telefono" className="block text-sm font-medium text-gray-700 mb-2">
-                      Teléfono *
-                    </label>
-                    <input
-                      type="tel"
-                      id="telefono"
-                      name="telefono"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent outline-none transition"
-                      placeholder="+57 300 123 4567"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mensaje *
-                  </label>
-                  <textarea
-                    id="mensaje"
-                    name="mensaje"
-                    rows={5}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-600 focus:border-transparent outline-none transition resize-none"
-                    placeholder="Cuéntenos brevemente sobre su situación..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-cyan-700 hover:bg-cyan-800 text-white font-semibold py-4 rounded-lg transition-colors shadow-md hover:shadow-lg"
-                >
-                  Enviar Consulta
-                </button>
-
-                <p className="text-xs text-gray-500 text-center">
-                  * Campos obligatorios. Sus datos están protegidos según nuestra política de privacidad.
-                </p>
-              </form>
+              <Form />
             </div>
 
             {/* Contact Info */}
