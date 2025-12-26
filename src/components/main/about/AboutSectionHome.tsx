@@ -28,8 +28,9 @@ export const AboutSectionHome = () => {
                   src="/imgs/people/esteban-restrepo.png"
                   alt="Esteban Restrepo - Director Jurídico"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-contain"
-                  priority
+                  priority={true}
                 />
               </div>
               

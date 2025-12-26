@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { AboutUsMetadata } from '@/global/metadata';
 import { WhatsAppIcon } from '@/global/components';
 import { WhatsAppService } from '@/global/services';
 import { Target, Shield, Users } from 'lucide-react';
@@ -21,6 +22,8 @@ const values = [
     description: '18 ejecutivos y 7 abogados especializados en recuperación y procesos judiciales.',
   },
 ];
+
+export const metadata = AboutUsMetadata;
 
 export default function AboutPage() {
   return (
@@ -52,6 +55,7 @@ export default function AboutPage() {
                     alt="Esteban Restrepo - Director Jurídico Grupo Coactiva"
                     fill
                     className="object-contain"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority
                   />
                 </div>
